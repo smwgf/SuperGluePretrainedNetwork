@@ -486,8 +486,8 @@ def make_matching_plot_fast(image0, image1, kpts0, kpts1, mkpts0,
                             show_keypoints=False, margin=10,
                             opencv_display=False, opencv_title='',
                             small_text=[]):
-    H0, W0 = image0.shape
-    H1, W1 = image1.shape
+    H0, W0,_ = image0.shape
+    H1, W1,_ = image1.shape
     H, W = max(H0, H1), W0 + W1 + margin
 
     out = 255*np.ones((H, W), np.uint8)
